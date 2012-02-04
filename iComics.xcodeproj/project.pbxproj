@@ -18,6 +18,8 @@
 		CED9BD8C14DD414D00241E84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED9BD7314DD414D00241E84 /* Foundation.framework */; };
 		CED9BD9414DD414D00241E84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CED9BD9214DD414D00241E84 /* InfoPlist.strings */; };
 		CED9BD9714DD414D00241E84 /* iComicsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED9BD9614DD414D00241E84 /* iComicsTests.m */; };
+		CED9BDA314DD43DD00241E84 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED9BDA114DD43DD00241E84 /* MainViewController.m */; };
+		CED9BDA414DD43DD00241E84 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED9BDA214DD43DD00241E84 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,18 +37,21 @@
 		CED9BD7114DD414D00241E84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CED9BD7314DD414D00241E84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CED9BD7514DD414D00241E84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CED9BD7914DD414D00241E84 /* iComics-Info.plist */ = {isa = PBXFileReference; path = "iComics-Info.plist"; sourceTree = "<group>"; };
+		CED9BD7914DD414D00241E84 /* iComics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iComics-Info.plist"; sourceTree = "<group>"; };
 		CED9BD7B14DD414D00241E84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CED9BD7D14DD414D00241E84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CED9BD7F14DD414D00241E84 /* iComics-Prefix.pch */ = {isa = PBXFileReference; path = "iComics-Prefix.pch"; sourceTree = "<group>"; };
-		CED9BD8014DD414D00241E84 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		CED9BD7F14DD414D00241E84 /* iComics-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iComics-Prefix.pch"; sourceTree = "<group>"; };
+		CED9BD8014DD414D00241E84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CED9BD8114DD414D00241E84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CED9BD8814DD414D00241E84 /* iComicsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iComicsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED9BD8914DD414D00241E84 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		CED9BD9114DD414D00241E84 /* iComicsTests-Info.plist */ = {isa = PBXFileReference; path = "iComicsTests-Info.plist"; sourceTree = "<group>"; };
+		CED9BD9114DD414D00241E84 /* iComicsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iComicsTests-Info.plist"; sourceTree = "<group>"; };
 		CED9BD9314DD414D00241E84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CED9BD9514DD414D00241E84 /* iComicsTests.h */ = {isa = PBXFileReference; path = iComicsTests.h; sourceTree = "<group>"; };
+		CED9BD9514DD414D00241E84 /* iComicsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iComicsTests.h; sourceTree = "<group>"; };
 		CED9BD9614DD414D00241E84 /* iComicsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iComicsTests.m; sourceTree = "<group>"; };
+		CED9BDA014DD43DD00241E84 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		CED9BDA114DD43DD00241E84 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		CED9BDA214DD43DD00241E84 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +114,9 @@
 				CED9BD8014DD414D00241E84 /* AppDelegate.h */,
 				CED9BD8114DD414D00241E84 /* AppDelegate.m */,
 				CED9BD7814DD414D00241E84 /* Supporting Files */,
+				CED9BDA014DD43DD00241E84 /* MainViewController.h */,
+				CED9BDA114DD43DD00241E84 /* MainViewController.m */,
+				CED9BDA214DD43DD00241E84 /* MainViewController.xib */,
 			);
 			path = iComics;
 			sourceTree = "<group>";
@@ -214,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED9BD7C14DD414D00241E84 /* InfoPlist.strings in Resources */,
+				CED9BDA414DD43DD00241E84 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +259,7 @@
 			files = (
 				CED9BD7E14DD414D00241E84 /* main.m in Sources */,
 				CED9BD8214DD414D00241E84 /* AppDelegate.m in Sources */,
+				CED9BDA314DD43DD00241E84 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +354,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iComics/iComics-Prefix.pch";
 				INFOPLIST_FILE = "iComics/iComics-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = "
+
+ 
+
+";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -355,6 +370,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iComics/iComics-Prefix.pch";
 				INFOPLIST_FILE = "iComics/iComics-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = "
+
+ 
+
+";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
