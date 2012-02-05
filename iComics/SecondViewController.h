@@ -1,13 +1,13 @@
 //
-//  iComicsTests.h
-//  iComicsTests
+//  SecondViewController.h
+//  iComics
 //
 //  Created by Lion User on 05/02/2012.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <UIKit/UIKit.h>
 
-@interface iComicsTests : SenTestCase
+@interface SecondViewController : UIViewController
 
 @end

@@ -2,7 +2,7 @@
 //  main.m
 //  iComics
 //
-//  Created by Lion User on 04/02/2012.
+//  Created by Lion User on 05/02/2012.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
