@@ -6,12 +6,17 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-@interface ComicPage : NSObject
+@interface ComicPage : 	NSObject
 {
 @private NSMutableArray *lines;
 @private int currentRow;
 @private int currentColumn;
+@private bool proceedToNextPage;
+@private bool proceedToPreviousPage;
+@private NSString *currentTile;
 }
+
+-(id) initWithLines:(NSMutableArray *)pageLines;
 
 -(void) moveLeft;
 -(void) moveRight;
@@ -19,7 +24,10 @@
 -(void) moveDown;
 
 @property(retain) NSMutableArray *lines;
-@property int currentRow;
-@property int currentColumn;
+@property(readonly) int currentRow;
+@property(readonly) int currentColumn;
+@property(readonly) bool proceedToNextPage;
+@property(readonly) bool proceedToPreviousPage;
+@property(retain) NSString *currentTile;
 
 @end
