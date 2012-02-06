@@ -8,26 +8,27 @@
 
 @interface ComicPage : 	NSObject
 {
-@private NSMutableArray *lines;
-@private int currentRow;
-@private int currentColumn;
-@private bool proceedToNextPage;
-@private bool proceedToPreviousPage;
-@private NSString *currentTile;
+@private NSMutableArray *_lines;
+@private int _currentRow;
+@private int _currentColumn;
+@private BOOL _proceedToNextPage;
+@private BOOL _proceedToPreviousPage;
+@private NSString *_currentTile;
 }
 
--(id) initWithLines:(NSMutableArray *)pageLines;
+-(ComicPage *) initWithLines:(NSMutableArray *)pageLines;
 
 -(void) moveLeft;
 -(void) moveRight;
 -(void) moveUp;
 -(void) moveDown;
+-(void) close;
 
 @property(retain) NSMutableArray *lines;
 @property(readonly) int currentRow;
 @property(readonly) int currentColumn;
-@property(readonly) bool proceedToNextPage;
-@property(readonly) bool proceedToPreviousPage;
+@property(readonly) BOOL proceedToNextPage;
+@property(readonly) BOOL proceedToPreviousPage;
 @property(retain) NSString *currentTile;
 
 @end

@@ -10,23 +10,36 @@
 
 @implementation ComicPage
 
-@synthesize lines;
-@synthesize currentRow;
-@synthesize currentColumn;
-@synthesize proceedToNextPage;
-@synthesize proceedToPreviousPage;
-@synthesize currentTile;
+@synthesize lines = _lines;
+@synthesize currentRow = _currentRow;
+@synthesize currentColumn = _currentColumn;
+@synthesize proceedToNextPage = _proceedToNextPage;
+@synthesize proceedToPreviousPage = _proceedToPreviousPage;
+@synthesize currentTile = _currentTile;
 
 -(ComicPage *) initWithLines:(NSMutableArray*)pageLines
 {
     self = [super init];
     self.lines = pageLines;
-    currentRow = 0;
-    currentColumn = 0;
-    proceedToNextPage = false;
-    proceedToNextPage = false;
+    _currentRow = 0;
+    _currentColumn = 0;
+    _proceedToPreviousPage = NO;
+    _proceedToNextPage = NO;
+    self.currentTile = [(NSMutableArray *)[self.lines objectAtIndex:_currentRow] objectAtIndex:_currentColumn];
     
     return self;
+}
+
+-(void)dealloc
+{
+    [_lines release];
+    [_currentTile release];
+    [super dealloc];
+}
+
+- (void)setCurrentTilePathAtColumnIndex:(int)colIndex andRowIndex:(int)rowIndex
+{
+    self.currentTile = [(NSMutableArray *)[self.lines objectAtIndex:rowIndex] objectAtIndex:colIndex];
 }
 
 -(void) moveLeft;
@@ -35,7 +48,7 @@
     int newCurrentColumn = self.currentColumn;
     newCurrentColumn--;
     
-    if(currentRow >= [self.lines count])
+    if(_currentRow >= [self.lines count])
     {
         return;
     }
@@ -45,13 +58,12 @@
         newCurrentRow --;
         if(newCurrentRow < 0)
         {
-            proceedToPreviousPage = true;
-            self.currentTile = nil;
+            _proceedToPreviousPage = YES;
             return;
         }
         else
         {
-            newCurrentColumn = [(NSMutableArray*)[self.lines objectAtIndex:currentRow] count] - 1;
+            newCurrentColumn = [(NSMutableArray*)[self.lines objectAtIndex:_currentRow] count] - 1;
         }
     }
     
@@ -60,9 +72,9 @@
         newCurrentColumn = 0;
     }
     
-    currentRow = newCurrentRow;
-    currentColumn = newCurrentColumn;
-    self.currentTile = [(NSMutableArray *)[self.lines objectAtIndex:currentRow] objectAtIndex:currentColumn];
+    _currentRow = newCurrentRow;
+    _currentColumn = newCurrentColumn;
+    [self setCurrentTilePathAtColumnIndex:_currentColumn andRowIndex:_currentRow];
 
 }
 
@@ -72,7 +84,7 @@
     int newCurrentColumn = self.currentColumn;
     newCurrentColumn++;
     
-    if(currentRow >= [self.lines count])
+    if(_currentRow >= [self.lines count])
     {
         return;
     }
@@ -86,14 +98,13 @@
     
     if(newCurrentRow >= [self.lines count])
     {
-        proceedToNextPage = true;
-        self.currentTile = nil;
+        _proceedToNextPage = YES;
         return;
     }
     
-    currentRow = newCurrentRow;
-    currentColumn = newCurrentColumn;
-    self.currentTile = [(NSMutableArray *)[self.lines objectAtIndex:currentRow] objectAtIndex:currentColumn];
+    _currentRow = newCurrentRow;
+    _currentColumn = newCurrentColumn;
+    [self setCurrentTilePathAtColumnIndex:_currentColumn andRowIndex:_currentRow];
     
 }
 
@@ -105,10 +116,10 @@
     {
         return;
     }
-    currentRow = newCurrentRow;
+    _currentRow = newCurrentRow;
     int currentRowMaxIndex = [(NSMutableArray *)[self.lines objectAtIndex:newCurrentRow] count] - 1;
-    int colIndex = currentColumn > currentRowMaxIndex ? currentRowMaxIndex : currentColumn;
-    self.currentTile = [(NSMutableArray *)[self.lines objectAtIndex:newCurrentRow] objectAtIndex:colIndex];
+    int colIndex = _currentColumn > currentRowMaxIndex ? currentRowMaxIndex : _currentColumn;
+    [self setCurrentTilePathAtColumnIndex:colIndex andRowIndex:newCurrentRow];
     
 }
 
@@ -120,16 +131,16 @@
     {
         return;
     }
-    currentRow = newCurrentRow;
+    _currentRow = newCurrentRow;
     int currentRowMaxIndex = [(NSMutableArray *)[self.lines objectAtIndex:newCurrentRow] count] - 1;
-    int colIndex = currentColumn > currentRowMaxIndex ? currentRowMaxIndex : currentColumn;
-    self.currentTile = [(NSMutableArray *)[self.lines objectAtIndex:newCurrentRow] objectAtIndex:colIndex];
+    int colIndex = _currentColumn > currentRowMaxIndex ? currentRowMaxIndex : _currentColumn;
+    [self setCurrentTilePathAtColumnIndex:colIndex andRowIndex:newCurrentRow];
 }
 
--(void)dealloc
+-(void) close
 {
-    [lines release];
-    [currentTile release];
+    _proceedToPreviousPage = NO;
+    _proceedToNextPage = NO;
 }
 
 
