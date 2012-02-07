@@ -30,6 +30,8 @@
 		CE5B483814DED0E4004F26E5 /* iComicsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B483714DED0E4004F26E5 /* iComicsTests.m */; };
 		CE5B484514DED197004F26E5 /* Comic.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B484214DED197004F26E5 /* Comic.m */; };
 		CE5B484614DED197004F26E5 /* ComicPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B484414DED197004F26E5 /* ComicPage.m */; };
+		CEBDF8B414E12334007B453C /* ComicsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBDF8B214E12333007B453C /* ComicsListController.m */; };
+		CEBDF8B514E12334007B453C /* ComicsListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBDF8B314E12334007B453C /* ComicsListController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,9 @@
 		CE5B484214DED197004F26E5 /* Comic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comic.m; sourceTree = "<group>"; };
 		CE5B484314DED197004F26E5 /* ComicPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicPage.h; sourceTree = "<group>"; };
 		CE5B484414DED197004F26E5 /* ComicPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicPage.m; sourceTree = "<group>"; };
+		CEBDF8B114E12333007B453C /* ComicsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicsListController.h; sourceTree = "<group>"; };
+		CEBDF8B214E12333007B453C /* ComicsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicsListController.m; sourceTree = "<group>"; };
+		CEBDF8B314E12334007B453C /* ComicsListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicsListController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +158,9 @@
 				CE5B481E14DED0E4004F26E5 /* SecondViewController_iPhone.xib */,
 				CE5B482114DED0E4004F26E5 /* SecondViewController_iPad.xib */,
 				CE5B47FF14DED0E4004F26E5 /* Supporting Files */,
+				CEBDF8B114E12333007B453C /* ComicsListController.h */,
+				CEBDF8B214E12333007B453C /* ComicsListController.m */,
+				CEBDF8B314E12334007B453C /* ComicsListController.xib */,
 			);
 			path = iComics;
 			sourceTree = "<group>";
@@ -266,6 +274,7 @@
 				CE5B481D14DED0E4004F26E5 /* FirstViewController_iPad.xib in Resources */,
 				CE5B482014DED0E4004F26E5 /* SecondViewController_iPhone.xib in Resources */,
 				CE5B482314DED0E4004F26E5 /* SecondViewController_iPad.xib in Resources */,
+				CEBDF8B514E12334007B453C /* ComicsListController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +315,7 @@
 				CE5B481314DED0E4004F26E5 /* SecondViewController.m in Sources */,
 				CE5B484514DED197004F26E5 /* Comic.m in Sources */,
 				CE5B484614DED197004F26E5 /* ComicPage.m in Sources */,
+				CEBDF8B414E12334007B453C /* ComicsListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +511,7 @@
 				CE5B483D14DED0E4004F26E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE5B483E14DED0E4004F26E5 /* Build configuration list for PBXNativeTarget "iComicsTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +520,7 @@
 				CE5B484014DED0E4004F26E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

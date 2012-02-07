@@ -12,6 +12,8 @@
 
 #import "SecondViewController.h"
 
+#import "ComicsListController.h"
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -36,8 +38,14 @@
         viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil] autorelease];
         viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil] autorelease];
     }
+    
+    ComicsListController *rootViewController = [[[ComicsListController alloc] initWithStyle:UITableViewStylePlain] autorelease];
+	
+	// Retrieve the array of known time zone names, then sort the array and pass it to the root view controller.
+    
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+    //self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, rootViewController, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
