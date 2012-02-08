@@ -9,6 +9,7 @@
 #import "ComicsListController.h"
 #import "Comic.h"
 #import "ComicPage.h"
+#import "ComicUITableViewCell.h"
 
 @implementation ComicsListController
 
@@ -102,14 +103,23 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    ComicUITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) 
+    {
+        
+        NSArray* views = [[NSBundle mainBundle] loadNibNamed:@"ComicUITableViewCell" owner:nil options:nil];
+        
+        for (UIView *view in views)
+        {
+            if([view isKindOfClass:[ComicUITableViewCell class]])
+            {
+                cell = (ComicUITableViewCell*)view;
+            }
+        }
     }
     Comic *comic = [self.comics objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat: @"Name: %@, number: %d, pages count: %d, pages: %@", comic.name, comic.number, comic.pagesCount, comic.pages];
-    cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-    cell.textLabel.numberOfLines = 0;
+    cell.comicName.text = comic.name;
+//    cell.textLabel.numberOfLines = 0;
 
 
     
@@ -117,6 +127,10 @@
     return cell;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 222;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
