@@ -1,5 +1,5 @@
 //
-//  ComicUITableViewCell.h
+//  ComicDetailsViewController.h
 //  iComics
 //
 //  Created by Lion User on 08/02/2012.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Comic.h"
 
-@interface ComicUITableViewCell : UITableViewCell
+@interface ComicDetailsViewController : UIViewController
 {
     IBOutlet UILabel *comicName;
     IBOutlet UIImageView *cover;

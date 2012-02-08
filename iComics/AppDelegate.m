@@ -39,8 +39,7 @@
         viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil] autorelease];
     }
     
-    ComicsListController *rootViewController = [[[ComicsListController alloc] initWithStyle:UITableViewStylePlain] autorelease];
-	
+    ComicsListController *rootViewController = [[[ComicsListController alloc] initWithNibName:@"ComicsListController" bundle:nil] autorelease];	
 	// Retrieve the array of known time zone names, then sort the array and pass it to the root view controller.
     
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];

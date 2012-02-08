@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ComicsListController : UITableViewController
+@interface ComicsListController : UIViewController <UITableViewDelegate, UITableViewDataSource>  
 {
     NSMutableArray *_comics;
 }
 
-@property(retain) NSMutableArray *comics;
+@property (nonatomic, retain) IBOutlet UISearchBar* search;
+@property (nonatomic, retain) IBOutlet UITableView* comicsTable;
+@property(nonatomic, retain) IBOutlet UIView* view;
+@property(nonatomic, retain) NSMutableArray *comics;
+
 
 @end

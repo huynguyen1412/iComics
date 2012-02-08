@@ -10,17 +10,19 @@
 #import "Comic.h"
 #import "ComicPage.h"
 #import "ComicUITableViewCell.h"
+#import "ComicDetailsViewController.h"
 
 @implementation ComicsListController
 
-@synthesize comics = _comics;
+@synthesize comics = _comics, search, comicsTable;
+@dynamic view;
 
 #warning get comic data loading it from library
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) 
+    {
         NSMutableArray *comic1_page1_line1 = [NSMutableArray arrayWithObjects:@"line1_tile1", @"line1_tile2", @"line1_tile3", nil];
         NSMutableArray *comic1_page1_line2 = [NSMutableArray arrayWithObjects:@"line2_tile1", @"line2_tile2", nil];
         ComicPage *comic1page1 = [[ComicPage alloc] initWithLines:[NSMutableArray arrayWithObjects:comic1_page1_line1, comic1_page1_line2, nil]];
@@ -34,7 +36,6 @@
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
     // Release any cached data, images, etc that aren't in use.
 }
 
@@ -43,7 +44,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -81,7 +81,8 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+//    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
 }
 
 #pragma mark - Table view data source
@@ -98,7 +99,12 @@
     return [self.comics count]; 
 }
 
-#warning implement comic item appearance here
+- (Comic *)getComicAt:(NSIndexPath *)indexPath
+{
+    Comic *comic = [self.comics objectAtIndex:indexPath.row];
+    return comic;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -109,20 +115,17 @@
         
         NSArray* views = [[NSBundle mainBundle] loadNibNamed:@"ComicUITableViewCell" owner:nil options:nil];
         
-        for (UIView *view in views)
+        for (UIView *cellView in views)
         {
-            if([view isKindOfClass:[ComicUITableViewCell class]])
+            if([cellView isKindOfClass:[ComicUITableViewCell class]])
             {
-                cell = (ComicUITableViewCell*)view;
+                cell = (ComicUITableViewCell*)cellView;
             }
         }
     }
-    Comic *comic = [self.comics objectAtIndex:indexPath.row];
-    cell.comicName.text = comic.name;
-//    cell.textLabel.numberOfLines = 0;
-
-
-    
+    Comic *comic;
+    comic = [self getComicAt:indexPath];
+    cell.comic = comic;
     
     return cell;
 }
@@ -174,14 +177,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    
+
+    ComicDetailsViewController *detailViewController = [[ComicDetailsViewController alloc] initWithNibName:@"ComicDetailsViewController" bundle:nil];
+    
+    detailViewController.comic = [self getComicAt:indexPath];
+    
+    [self presentViewController:detailViewController animated:YES completion:NULL];
+    //[self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];
+
 }
 
 @end
