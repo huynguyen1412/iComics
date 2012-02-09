@@ -13,14 +13,11 @@
 		CE5B480314DED0E4004F26E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE5B480114DED0E4004F26E5 /* InfoPlist.strings */; };
 		CE5B480514DED0E4004F26E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B480414DED0E4004F26E5 /* main.m */; };
 		CE5B480914DED0E4004F26E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B480814DED0E4004F26E5 /* AppDelegate.m */; };
-		CE5B480C14DED0E4004F26E5 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B480B14DED0E4004F26E5 /* FirstViewController.m */; };
 		CE5B480E14DED0E4004F26E5 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5B480D14DED0E4004F26E5 /* first.png */; };
 		CE5B481014DED0E4004F26E5 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5B480F14DED0E4004F26E5 /* first@2x.png */; };
 		CE5B481314DED0E4004F26E5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B481214DED0E4004F26E5 /* SecondViewController.m */; };
 		CE5B481514DED0E4004F26E5 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5B481414DED0E4004F26E5 /* second.png */; };
 		CE5B481714DED0E4004F26E5 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5B481614DED0E4004F26E5 /* second@2x.png */; };
-		CE5B481A14DED0E4004F26E5 /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5B481814DED0E4004F26E5 /* FirstViewController_iPhone.xib */; };
-		CE5B481D14DED0E4004F26E5 /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5B481B14DED0E4004F26E5 /* FirstViewController_iPad.xib */; };
 		CE5B482014DED0E4004F26E5 /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5B481E14DED0E4004F26E5 /* SecondViewController_iPhone.xib */; };
 		CE5B482314DED0E4004F26E5 /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5B482114DED0E4004F26E5 /* SecondViewController_iPad.xib */; };
 		CE5B482B14DED0E4004F26E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5B482A14DED0E4004F26E5 /* SenTestingKit.framework */; };
@@ -40,6 +37,13 @@
 		CECD5D4C14E315CC0041B69D /* ComicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECD5D4A14E315CC0041B69D /* ComicViewController.xib */; };
 		CECD5D4E14E330B70041B69D /* ComicsListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECD5D4D14E330B70041B69D /* ComicsListController.xib */; };
 		CECD5D5014E3E1280041B69D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECD5D4F14E3E1280041B69D /* QuartzCore.framework */; };
+		CECD5D5314E456E80041B69D /* XMLComicParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CECD5D5214E456E80041B69D /* XMLComicParser.m */; };
+		CECD5D5F14E4732C0041B69D /* cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CECD5D5914E4732C0041B69D /* cover.jpg */; };
+		CECD5D6014E4732C0041B69D /* line1_tile1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CECD5D5A14E4732C0041B69D /* line1_tile1.jpg */; };
+		CECD5D6114E4732C0041B69D /* line1_tile2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CECD5D5B14E4732C0041B69D /* line1_tile2.jpg */; };
+		CECD5D6214E4732C0041B69D /* line1_tile3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CECD5D5C14E4732C0041B69D /* line1_tile3.jpg */; };
+		CECD5D6314E4732C0041B69D /* line2_tile1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CECD5D5D14E4732C0041B69D /* line2_tile1.jpg */; };
+		CECD5D6414E4732C0041B69D /* line2_tile2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CECD5D5E14E4732C0041B69D /* line2_tile2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,16 +67,12 @@
 		CE5B480614DED0E4004F26E5 /* iComics-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iComics-Prefix.pch"; sourceTree = "<group>"; };
 		CE5B480714DED0E4004F26E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE5B480814DED0E4004F26E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CE5B480A14DED0E4004F26E5 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		CE5B480B14DED0E4004F26E5 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		CE5B480D14DED0E4004F26E5 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		CE5B480F14DED0E4004F26E5 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		CE5B481114DED0E4004F26E5 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		CE5B481214DED0E4004F26E5 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		CE5B481414DED0E4004F26E5 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		CE5B481614DED0E4004F26E5 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		CE5B481914DED0E4004F26E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPhone.xib; sourceTree = "<group>"; };
-		CE5B481C14DED0E4004F26E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
 		CE5B481F14DED0E4004F26E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
 		CE5B482214DED0E4004F26E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPad.xib; sourceTree = "<group>"; };
 		CE5B482914DED0E4004F26E5 /* iComicsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iComicsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,11 +92,19 @@
 		CECD5D4214E2A4E10041B69D /* list-item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-item.png"; sourceTree = "<group>"; };
 		CECD5D4314E2A4E10041B69D /* list-item@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-item@2x.png"; sourceTree = "<group>"; };
 		CECD5D4614E2BD420041B69D /* ComicUITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicUITableViewCell.xib; sourceTree = "<group>"; };
-		CECD5D4814E315CC0041B69D /* ComicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = ComicViewController.h; sourceTree = "<group>"; };
+		CECD5D4814E315CC0041B69D /* ComicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicViewController.h; sourceTree = "<group>"; };
 		CECD5D4914E315CC0041B69D /* ComicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicViewController.m; sourceTree = "<group>"; };
 		CECD5D4A14E315CC0041B69D /* ComicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicViewController.xib; sourceTree = "<group>"; };
 		CECD5D4D14E330B70041B69D /* ComicsListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicsListController.xib; sourceTree = "<group>"; };
 		CECD5D4F14E3E1280041B69D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CECD5D5114E456E80041B69D /* XMLComicParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLComicParser.h; sourceTree = "<group>"; };
+		CECD5D5214E456E80041B69D /* XMLComicParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLComicParser.m; sourceTree = "<group>"; };
+		CECD5D5914E4732C0041B69D /* cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cover.jpg; sourceTree = "<group>"; };
+		CECD5D5A14E4732C0041B69D /* line1_tile1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = line1_tile1.jpg; sourceTree = "<group>"; };
+		CECD5D5B14E4732C0041B69D /* line1_tile2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = line1_tile2.jpg; sourceTree = "<group>"; };
+		CECD5D5C14E4732C0041B69D /* line1_tile3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = line1_tile3.jpg; sourceTree = "<group>"; };
+		CECD5D5D14E4732C0041B69D /* line2_tile1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = line2_tile1.jpg; sourceTree = "<group>"; };
+		CECD5D5E14E4732C0041B69D /* line2_tile2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = line2_tile2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,16 +173,12 @@
 				CE5B484414DED197004F26E5 /* ComicPage.m */,
 				CE5B480714DED0E4004F26E5 /* AppDelegate.h */,
 				CE5B480814DED0E4004F26E5 /* AppDelegate.m */,
-				CE5B480A14DED0E4004F26E5 /* FirstViewController.h */,
-				CE5B480B14DED0E4004F26E5 /* FirstViewController.m */,
 				CE5B480D14DED0E4004F26E5 /* first.png */,
 				CE5B480F14DED0E4004F26E5 /* first@2x.png */,
 				CE5B481114DED0E4004F26E5 /* SecondViewController.h */,
 				CE5B481214DED0E4004F26E5 /* SecondViewController.m */,
 				CE5B481414DED0E4004F26E5 /* second.png */,
 				CE5B481614DED0E4004F26E5 /* second@2x.png */,
-				CE5B481814DED0E4004F26E5 /* FirstViewController_iPhone.xib */,
-				CE5B481B14DED0E4004F26E5 /* FirstViewController_iPad.xib */,
 				CE5B481E14DED0E4004F26E5 /* SecondViewController_iPhone.xib */,
 				CE5B482114DED0E4004F26E5 /* SecondViewController_iPad.xib */,
 				CE5B47FF14DED0E4004F26E5 /* Supporting Files */,
@@ -187,6 +191,8 @@
 				CECD5D4814E315CC0041B69D /* ComicViewController.h */,
 				CECD5D4914E315CC0041B69D /* ComicViewController.m */,
 				CECD5D4A14E315CC0041B69D /* ComicViewController.xib */,
+				CECD5D5114E456E80041B69D /* XMLComicParser.h */,
+				CECD5D5214E456E80041B69D /* XMLComicParser.m */,
 			);
 			path = iComics;
 			sourceTree = "<group>";
@@ -224,10 +230,24 @@
 		CECD5D4114E2A4A40041B69D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CECD5D5814E4732C0041B69D /* comic */,
 				CECD5D4214E2A4E10041B69D /* list-item.png */,
 				CECD5D4314E2A4E10041B69D /* list-item@2x.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		CECD5D5814E4732C0041B69D /* comic */ = {
+			isa = PBXGroup;
+			children = (
+				CECD5D5914E4732C0041B69D /* cover.jpg */,
+				CECD5D5A14E4732C0041B69D /* line1_tile1.jpg */,
+				CECD5D5B14E4732C0041B69D /* line1_tile2.jpg */,
+				CECD5D5C14E4732C0041B69D /* line1_tile3.jpg */,
+				CECD5D5D14E4732C0041B69D /* line2_tile1.jpg */,
+				CECD5D5E14E4732C0041B69D /* line2_tile2.jpg */,
+			);
+			path = comic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,8 +325,6 @@
 				CE5B481014DED0E4004F26E5 /* first@2x.png in Resources */,
 				CE5B481514DED0E4004F26E5 /* second.png in Resources */,
 				CE5B481714DED0E4004F26E5 /* second@2x.png in Resources */,
-				CE5B481A14DED0E4004F26E5 /* FirstViewController_iPhone.xib in Resources */,
-				CE5B481D14DED0E4004F26E5 /* FirstViewController_iPad.xib in Resources */,
 				CE5B482014DED0E4004F26E5 /* SecondViewController_iPhone.xib in Resources */,
 				CE5B482314DED0E4004F26E5 /* SecondViewController_iPad.xib in Resources */,
 				CECD5D4014E2A23B0041B69D /* ComicUITableViewCell.h in Resources */,
@@ -315,6 +333,12 @@
 				CECD5D4714E2BD420041B69D /* ComicUITableViewCell.xib in Resources */,
 				CECD5D4C14E315CC0041B69D /* ComicViewController.xib in Resources */,
 				CECD5D4E14E330B70041B69D /* ComicsListController.xib in Resources */,
+				CECD5D5F14E4732C0041B69D /* cover.jpg in Resources */,
+				CECD5D6014E4732C0041B69D /* line1_tile1.jpg in Resources */,
+				CECD5D6114E4732C0041B69D /* line1_tile2.jpg in Resources */,
+				CECD5D6214E4732C0041B69D /* line1_tile3.jpg in Resources */,
+				CECD5D6314E4732C0041B69D /* line2_tile1.jpg in Resources */,
+				CECD5D6414E4732C0041B69D /* line2_tile2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,13 +375,13 @@
 			files = (
 				CE5B480514DED0E4004F26E5 /* main.m in Sources */,
 				CE5B480914DED0E4004F26E5 /* AppDelegate.m in Sources */,
-				CE5B480C14DED0E4004F26E5 /* FirstViewController.m in Sources */,
 				CE5B481314DED0E4004F26E5 /* SecondViewController.m in Sources */,
 				CE5B484514DED197004F26E5 /* Comic.m in Sources */,
 				CE5B484614DED197004F26E5 /* ComicPage.m in Sources */,
 				CEBDF8B414E12334007B453C /* ComicsListController.m in Sources */,
 				CECD5D3B14E29F9F0041B69D /* ComicUITableViewCell.m in Sources */,
 				CECD5D4B14E315CC0041B69D /* ComicViewController.m in Sources */,
+				CECD5D5314E456E80041B69D /* XMLComicParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,22 +410,6 @@
 				CE5B480214DED0E4004F26E5 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CE5B481814DED0E4004F26E5 /* FirstViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE5B481914DED0E4004F26E5 /* en */,
-			);
-			name = FirstViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		CE5B481B14DED0E4004F26E5 /* FirstViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE5B481C14DED0E4004F26E5 /* en */,
-			);
-			name = FirstViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		CE5B481E14DED0E4004F26E5 /* SecondViewController_iPhone.xib */ = {

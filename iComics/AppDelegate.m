@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 
-#import "FirstViewController.h"
-
 #import "SecondViewController.h"
 
 #import "ComicsListController.h"
@@ -26,24 +24,50 @@
     [super dealloc];
 }
 
+- (void)createTestData
+{
+    NSString *appFolderPath = [[NSBundle mainBundle] resourcePath];
+    NSString *comicsLibraryPath = [appFolderPath stringByAppendingString:@"/ComicsLibrary/comic1"];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    BOOL libraryExists = [fileManager fileExistsAtPath:comicsLibraryPath];
+    if(!libraryExists)
+    {
+        [fileManager createDirectoryAtPath:comicsLibraryPath withIntermediateDirectories:YES attributes:nil error:nil];
+        NSArray *comicFiles = [NSArray arrayWithObjects: 
+                               @"cover.jpg",
+                               @"line1_tile1.jpg",
+                               @"line1_tile2.jpg",
+                               @"line1_tile3.jpg",
+                               @"line2_tile1.jpg",
+                               @"line2_tile2.jpg", nil];
+        for(NSString *comicFile in comicFiles)
+        {
+            [fileManager copyItemAtPath:
+             [[appFolderPath stringByAppendingString: @"/"] stringByAppendingString:comicFile] toPath:
+             [[comicsLibraryPath stringByAppendingString: @"/"] stringByAppendingString:comicFile] error:nil];
+        }
+        NSLog(@"Directory Contents:\n%@", [fileManager directoryContentsAtPath: comicsLibraryPath]);
+    }
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [self createTestData];
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    UIViewController *viewController1, *viewController2;
+    UIViewController *viewController1;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil] autorelease];
-        viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController_iPhone" bundle:nil] autorelease];
+        viewController1 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController_iPhone" bundle:nil] autorelease];
     } else {
-        viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil] autorelease];
-        viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil] autorelease];
+        viewController1 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil] autorelease];
     }
     
     ComicsListController *rootViewController = [[[ComicsListController alloc] initWithNibName:@"ComicsListController" bundle:nil] autorelease];	
-	// Retrieve the array of known time zone names, then sort the array and pass it to the root view controller.
     
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    //self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, rootViewController, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];

@@ -64,7 +64,8 @@
 
 -(void) moveTileLeft
 {
-    if(_currentPage == [_pages count])
+    bool endReached = _currentPage == [_pages count];
+    if(endReached)
     {
         _currentPage--;
     }
@@ -74,17 +75,22 @@
     }
     
     ComicPage *page = [_pages objectAtIndex:_currentPage];
-    [page moveLeft];
+    if(!endReached)
+    {
+        [page moveLeft];
+    }
     if ([page proceedToPreviousPage]) 
     {
         _currentPage--;
+        [page close];
     }
     
 }
 
 -(void) moveTileRight
 {
-    if(_currentPage == -1)
+    bool isCoverSelected = _currentPage == -1;
+    if(isCoverSelected)
     {
         _currentPage++;
     }
@@ -94,10 +100,14 @@
     }
     
     ComicPage *page = [_pages objectAtIndex:_currentPage];
-    [page moveRight];
+    if(!isCoverSelected)
+    {
+        [page moveRight];
+    }
     if ([page proceedToNextPage]) 
     {
         _currentPage++;
+        [page close];
     }
     
 }

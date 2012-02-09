@@ -46,12 +46,14 @@
 {
     int newCurrentRow = self.currentRow;
     int newCurrentColumn = self.currentColumn;
-    newCurrentColumn--;
     
     if(_currentRow >= [self.lines count])
     {
         return;
     }
+    int currentRowTilesCount = [(NSMutableArray*)[self.lines objectAtIndex:_currentRow] count];
+    newCurrentColumn = newCurrentColumn < currentRowTilesCount ? newCurrentColumn : currentRowTilesCount - 1;
+    newCurrentColumn--;
     
     if(newCurrentColumn < 0)
     {

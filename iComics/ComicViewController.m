@@ -58,7 +58,7 @@
 
 -(void) handleSwipe:(UISwipeGestureRecognizerDirection)direction
 {
-    //NSString *imagePath = [self.comic getCurrentTilePath];
+    NSString *imagePath = [self.comic getCurrentTilePath];
     NSString *animationSubType = nil;
     switch (direction)
     {
@@ -84,12 +84,26 @@
             break;
         default:
             break;
-    } 
-//    if(![imagePath isEqualToString: [self.comic getCurrentTilePath]])
-//    {
-        //self.cover.image = [UIImage imageNamed:imagePath];
-        self.cover.image = [UIImage imageNamed:@"first.png"];
-        
+    }
+    NSString *newPath = [self.comic getCurrentTilePath];
+    
+    if(imagePath == nil)
+    {
+        imagePath = @"first.png";
+    }
+    if(newPath == nil)
+    {
+        newPath = @"first.png";;
+    }
+    
+    NSLog(@"Previous path: %@", imagePath);
+    NSLog(@"New path: %@", newPath);
+    
+    if(![imagePath isEqualToString: [self.comic getCurrentTilePath]])
+    {
+        self.cover.image = [UIImage imageNamed:newPath];
+        //self.cover.image = [UIImage imageNamed:@"first.png"];
+
         CATransition *transition = [CATransition animation];
         transition.duration = 0.7f;
         transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
@@ -97,7 +111,7 @@
         transition.subtype = animationSubType;
         
         [self.cover.layer addAnimation:transition forKey:nil];
-//    }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -113,7 +127,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIImage *img = [UIImage imageNamed:@"list-item.png"];
+    UIImage *img = [UIImage imageNamed:[self.comic getCurrentTilePath]];
     self.cover.image = img;
     
     UISwipeGestureRecognizer *leftSwipeRecognizer = [[UISwipeGestureRecognizer alloc]  initWithTarget:self action:@selector(handleLeftSwipe)];
