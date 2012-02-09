@@ -28,6 +28,7 @@
 -(void) moveTileUp;
 -(void) moveTileDown;
 -(NSString *) getCurrentTilePath;
+-(NSString *) getCoverFullPath;
 	
 @property(retain) NSString *name;
 @property int number;

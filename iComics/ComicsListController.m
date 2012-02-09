@@ -27,7 +27,12 @@
         NSMutableArray *comic1_page1_line2 = [NSMutableArray arrayWithObjects:@"line2_tile1.jpg", @"line2_tile2.jpg", nil];
         ComicPage *comic1page1 = [[ComicPage alloc] initWithLines:[NSMutableArray arrayWithObjects:comic1_page1_line1, comic1_page1_line2, nil]];
         Comic *comic1 = [[[Comic alloc] initWithName:@"Comic1" Number:1 PagesCount:23 PublishDate:[[[NSDate alloc] init]autorelease] CoverName:@"cover.jpg" Path:@"ComicsLibrary/comic1/" Pages:[NSMutableArray arrayWithObjects:comic1page1, nil]] autorelease];
-        self.comics = [NSMutableArray arrayWithObjects: comic1, nil];
+        NSMutableArray *comicsList = [NSMutableArray arrayWithObjects: comic1, nil];
+        for (int i = 0; i < 20; ++i)
+        {
+            [comicsList addObject:comic1];
+        }
+        self.comics = comicsList;
     }
     return self;
 }

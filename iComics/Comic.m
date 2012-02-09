@@ -47,11 +47,16 @@
     [super dealloc];
 }
 
+-(NSString *) getCoverFullPath
+{
+    return [_path stringByAppendingString:_coverName]; 
+}
+
 -(NSString *) getCurrentTilePath
 {
     if(_currentPage == -1)
     {
-        return [_path stringByAppendingString:_coverName]; 
+        return [self getCoverFullPath];
     }
     if(_currentPage == [_pages count])
     {

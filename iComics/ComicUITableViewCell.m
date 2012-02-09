@@ -22,6 +22,7 @@
     [comic release];
     comic = [newComic retain];
     self.comicName.text = self.comic.name;
+    self.cover.image = [UIImage imageNamed:[comic getCoverFullPath]];
 }
 
 
@@ -29,7 +30,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        self.contentMode = UIViewContentModeScaleToFill;
     }
     return self;
 }

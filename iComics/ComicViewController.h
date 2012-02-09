@@ -22,5 +22,6 @@
 -(void)handleTopSwipe;
 -(void)handleBottomSwipe;
 -(void) handleSwipe:(UISwipeGestureRecognizerDirection)direction;
+-(void)setImageFromPath:(NSString *)newPath;
 
 @end

@@ -99,11 +99,10 @@
     NSLog(@"Previous path: %@", imagePath);
     NSLog(@"New path: %@", newPath);
     
-    if(![imagePath isEqualToString: [self.comic getCurrentTilePath]])
+    if(![imagePath isEqualToString: newPath])
     {
-        self.cover.image = [UIImage imageNamed:newPath];
-        //self.cover.image = [UIImage imageNamed:@"first.png"];
-
+        [self setImageFromPath:newPath];
+        
         CATransition *transition = [CATransition animation];
         transition.duration = 0.7f;
         transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
@@ -112,6 +111,13 @@
         
         [self.cover.layer addAnimation:transition forKey:nil];
     }
+}
+
+- (void)setImageFromPath:(NSString *)newPath
+{
+    self.cover.image = [UIImage imageNamed:newPath];
+    self.cover.contentMode = UIViewContentModeScaleAspectFit;
+    self.cover.backgroundColor = [UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -127,8 +133,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIImage *img = [UIImage imageNamed:[self.comic getCurrentTilePath]];
-    self.cover.image = img;
+    
+    [self setImageFromPath:[self.comic getCurrentTilePath]];
     
     UISwipeGestureRecognizer *leftSwipeRecognizer = [[UISwipeGestureRecognizer alloc]  initWithTarget:self action:@selector(handleLeftSwipe)];
     leftSwipeRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
@@ -166,8 +172,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight);
 }
 
 

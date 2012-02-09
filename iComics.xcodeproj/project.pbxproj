@@ -135,7 +135,6 @@
 		CE5B47E914DED0E4004F26E5 = {
 			isa = PBXGroup;
 			children = (
-				CECD5D4F14E3E1280041B69D /* QuartzCore.framework */,
 				CE5B47FE14DED0E4004F26E5 /* iComics */,
 				CE5B483014DED0E4004F26E5 /* iComicsTests */,
 				CE5B47F714DED0E4004F26E5 /* Frameworks */,
@@ -155,6 +154,7 @@
 		CE5B47F714DED0E4004F26E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CECD5D4F14E3E1280041B69D /* QuartzCore.framework */,
 				CE5B47F814DED0E4004F26E5 /* UIKit.framework */,
 				CE5B47FA14DED0E4004F26E5 /* Foundation.framework */,
 				CE5B47FC14DED0E4004F26E5 /* CoreGraphics.framework */,
