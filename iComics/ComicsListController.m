@@ -10,7 +10,7 @@
 #import "Comic.h"
 #import "ComicPage.h"
 #import "ComicUITableViewCell.h"
-#import "ComicDetailsViewController.h"
+#import "ComicViewController.h"
 
 @implementation ComicsListController
 
@@ -179,7 +179,7 @@
 {
     
 
-    ComicDetailsViewController *detailViewController = [[ComicDetailsViewController alloc] initWithNibName:@"ComicDetailsViewController" bundle:nil];
+    ComicViewController *detailViewController = [[ComicViewController alloc] initWithNibName:@"ComicDetailsViewController" bundle:nil];
     
     detailViewController.comic = [self getComicAt:indexPath];
     
