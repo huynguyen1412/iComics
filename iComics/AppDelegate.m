@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 
-#import "SecondViewController.h"
-
 #import "ComicsListController.h"
 
 @implementation AppDelegate
@@ -57,18 +55,11 @@
     [self createTestData];
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-    UIViewController *viewController1;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        viewController1 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController_iPhone" bundle:nil] autorelease];
-    } else {
-        viewController1 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil] autorelease];
-    }
     
-    ComicsListController *rootViewController = [[[ComicsListController alloc] initWithNibName:@"ComicsListController" bundle:nil] autorelease];	
+    ComicsListController *libraryViewController = [[[ComicsListController alloc] initWithNibName:@"ComicsListController" bundle:nil] autorelease];	
     
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, rootViewController, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:libraryViewController, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

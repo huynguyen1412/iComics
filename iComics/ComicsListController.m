@@ -33,6 +33,8 @@
             [comicsList addObject:comic1];
         }
         self.comics = comicsList;
+        self.tabBarItem.image = [UIImage imageNamed:@"first.png"];
+        self.tabBarItem.title = @"Library";
     }
     return self;
 }

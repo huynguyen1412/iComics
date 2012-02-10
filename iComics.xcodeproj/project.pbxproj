@@ -15,11 +15,8 @@
 		CE5B480914DED0E4004F26E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B480814DED0E4004F26E5 /* AppDelegate.m */; };
 		CE5B480E14DED0E4004F26E5 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5B480D14DED0E4004F26E5 /* first.png */; };
 		CE5B481014DED0E4004F26E5 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5B480F14DED0E4004F26E5 /* first@2x.png */; };
-		CE5B481314DED0E4004F26E5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B481214DED0E4004F26E5 /* SecondViewController.m */; };
 		CE5B481514DED0E4004F26E5 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5B481414DED0E4004F26E5 /* second.png */; };
 		CE5B481714DED0E4004F26E5 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5B481614DED0E4004F26E5 /* second@2x.png */; };
-		CE5B482014DED0E4004F26E5 /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5B481E14DED0E4004F26E5 /* SecondViewController_iPhone.xib */; };
-		CE5B482314DED0E4004F26E5 /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5B482114DED0E4004F26E5 /* SecondViewController_iPad.xib */; };
 		CE5B482B14DED0E4004F26E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5B482A14DED0E4004F26E5 /* SenTestingKit.framework */; };
 		CE5B482C14DED0E4004F26E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5B47F814DED0E4004F26E5 /* UIKit.framework */; };
 		CE5B482D14DED0E4004F26E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5B47FA14DED0E4004F26E5 /* Foundation.framework */; };
@@ -70,12 +67,8 @@
 		CE5B480814DED0E4004F26E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CE5B480D14DED0E4004F26E5 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		CE5B480F14DED0E4004F26E5 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		CE5B481114DED0E4004F26E5 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		CE5B481214DED0E4004F26E5 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		CE5B481414DED0E4004F26E5 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		CE5B481614DED0E4004F26E5 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		CE5B481F14DED0E4004F26E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
-		CE5B482214DED0E4004F26E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPad.xib; sourceTree = "<group>"; };
 		CE5B482914DED0E4004F26E5 /* iComicsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iComicsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5B482A14DED0E4004F26E5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		CE5B483214DED0E4004F26E5 /* iComicsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iComicsTests-Info.plist"; sourceTree = "<group>"; };
@@ -177,12 +170,8 @@
 				CE5B480814DED0E4004F26E5 /* AppDelegate.m */,
 				CE5B480D14DED0E4004F26E5 /* first.png */,
 				CE5B480F14DED0E4004F26E5 /* first@2x.png */,
-				CE5B481114DED0E4004F26E5 /* SecondViewController.h */,
-				CE5B481214DED0E4004F26E5 /* SecondViewController.m */,
 				CE5B481414DED0E4004F26E5 /* second.png */,
 				CE5B481614DED0E4004F26E5 /* second@2x.png */,
-				CE5B481E14DED0E4004F26E5 /* SecondViewController_iPhone.xib */,
-				CE5B482114DED0E4004F26E5 /* SecondViewController_iPad.xib */,
 				CE5B47FF14DED0E4004F26E5 /* Supporting Files */,
 				CEBDF8B114E12333007B453C /* ComicsListController.h */,
 				CECD5D4D14E330B70041B69D /* ComicsListController.xib */,
@@ -328,8 +317,6 @@
 				CE5B481014DED0E4004F26E5 /* first@2x.png in Resources */,
 				CE5B481514DED0E4004F26E5 /* second.png in Resources */,
 				CE5B481714DED0E4004F26E5 /* second@2x.png in Resources */,
-				CE5B482014DED0E4004F26E5 /* SecondViewController_iPhone.xib in Resources */,
-				CE5B482314DED0E4004F26E5 /* SecondViewController_iPad.xib in Resources */,
 				CECD5D4014E2A23B0041B69D /* ComicUITableViewCell.h in Resources */,
 				CECD5D4414E2A4E10041B69D /* list-item.png in Resources */,
 				CECD5D4514E2A4E10041B69D /* list-item@2x.png in Resources */,
@@ -379,7 +366,6 @@
 			files = (
 				CE5B480514DED0E4004F26E5 /* main.m in Sources */,
 				CE5B480914DED0E4004F26E5 /* AppDelegate.m in Sources */,
-				CE5B481314DED0E4004F26E5 /* SecondViewController.m in Sources */,
 				CE5B484514DED197004F26E5 /* Comic.m in Sources */,
 				CE5B484614DED197004F26E5 /* ComicPage.m in Sources */,
 				CEBDF8B414E12334007B453C /* ComicsListController.m in Sources */,
@@ -414,22 +400,6 @@
 				CE5B480214DED0E4004F26E5 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CE5B481E14DED0E4004F26E5 /* SecondViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE5B481F14DED0E4004F26E5 /* en */,
-			);
-			name = SecondViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		CE5B482114DED0E4004F26E5 /* SecondViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE5B482214DED0E4004F26E5 /* en */,
-			);
-			name = SecondViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		CE5B483314DED0E4004F26E5 /* InfoPlist.strings */ = {
