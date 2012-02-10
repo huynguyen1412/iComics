@@ -12,7 +12,7 @@
 
 @implementation ComicViewController
 
-@synthesize cover = cover;
+@synthesize cover = cover, backButton = backButton;
 
 @dynamic comic;
 -(Comic*) comic
@@ -29,10 +29,16 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    if (self)
+    {
+        
     }
     return self;
+}
+
+-(void)goBack:(id)sender
+{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 
@@ -133,8 +139,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self setImageFromPath:[self.comic getCurrentTilePath]];
+    NSLog(@"back button: %@", self.backButton);
+    NSLog(@"back button: %@", self.cover);
     
     UISwipeGestureRecognizer *leftSwipeRecognizer = [[UISwipeGestureRecognizer alloc]  initWithTarget:self action:@selector(handleLeftSwipe)];
     leftSwipeRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;

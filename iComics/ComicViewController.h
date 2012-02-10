@@ -15,13 +15,15 @@
 }
 
 @property(retain) IBOutlet UIImageView *cover;
+@property(retain) IBOutlet UIButton *backButton;
 @property(retain) Comic *comic;
 
+-(IBAction)goBack:(id)sender;
 -(void)handleLeftSwipe;
 -(void)handleRightSwipe;
 -(void)handleTopSwipe;
 -(void)handleBottomSwipe;
--(void) handleSwipe:(UISwipeGestureRecognizerDirection)direction;
+-(void)handleSwipe:(UISwipeGestureRecognizerDirection)direction;
 -(void)setImageFromPath:(NSString *)newPath;
 
 @end

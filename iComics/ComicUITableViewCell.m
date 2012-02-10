@@ -11,7 +11,7 @@
 
 @implementation ComicUITableViewCell
 
-@synthesize comicName = comicName, cover = cover;
+@synthesize comicName = comicName, cover = cover, publishDate;
 
 -(Comic*) comic
 {
@@ -23,6 +23,10 @@
     comic = [newComic retain];
     self.comicName.text = self.comic.name;
     self.cover.image = [UIImage imageNamed:[comic getCoverFullPath]];
+    
+    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    dateFormatter.dateFormat = @"dd-MM-yyyy";
+    self.publishDate.text = [dateFormatter stringFromDate: self.comic.publishDate];
 }
 
 

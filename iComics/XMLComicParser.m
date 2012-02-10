@@ -67,7 +67,7 @@
     }
     else if([self.currentElement isEqualToString:@"publish_date"])
     {
-        [self.dateFormater dateFromString:string];
+        self.publishDate = [self.dateFormater dateFromString:string];
     }
     else if([self.currentElement isEqualToString:@"number"])
     {

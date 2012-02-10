@@ -18,6 +18,7 @@
 
 @property(retain) IBOutlet UILabel *comicName;
 @property(retain) IBOutlet UIImageView *cover;
+@property(retain) IBOutlet UILabel *publishDate;
 @property(retain) Comic *comic;
 
 @end
