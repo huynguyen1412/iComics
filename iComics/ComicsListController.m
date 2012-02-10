@@ -8,87 +8,28 @@
 
 #import "ComicsListController.h"
 #import "Comic.h"
-#import "ComicPage.h"
 #import "ComicUITableViewCell.h"
 #import "ComicViewController.h"
-#import "XMLComicParser.h"
 
 @implementation ComicsListController
 
 @synthesize comics = _comics, search, comicsTable;
 @dynamic view;
 
-#warning get comic data loading it from library
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) 
     {
-        XMLComicParser *parser = [[XMLComicParser alloc] initWithPath:@"ComicsLibrary/comic1/"];
-        [parser parseComicXML:YES];
-        Comic *comic1 = parser.comic;
-        NSMutableArray *comicsList = [NSMutableArray arrayWithObjects: comic1, nil];
-        for (int i = 0; i < 20; ++i)
-        {
-            [comicsList addObject:comic1];
-        }
-        self.comics = comicsList;
-        self.tabBarItem.image = [UIImage imageNamed:@"first.png"];
-        self.tabBarItem.title = @"Library";
+
     }
     return self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
-}
-
 #pragma mark - View lifecycle
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-//    return (interfaceOrientation == UIInterfaceOrientationPortrait);
     return YES;
 }
 
@@ -96,19 +37,17 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return 1;
+    return [self.comics count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [self.comics count]; 
+    return [(NSMutableArray *)[self.comics objectAtIndex:section] count];
 }
 
 - (Comic *)getComicAt:(NSIndexPath *)indexPath
 {
-    Comic *comic = [self.comics objectAtIndex:indexPath.row];
+    Comic *comic = [(NSMutableArray *)[self.comics objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     return comic;
 }
 
@@ -140,6 +79,12 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 222;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    Comic *comic = [(NSMutableArray *)[self.comics objectAtIndex:section] objectAtIndex:0];
+    return comic.name;
 }
 
 /*

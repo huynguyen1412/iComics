@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ComicsListController.h"
+#import "XMLComicParser.h"
 
 @implementation AppDelegate
 
@@ -49,6 +50,19 @@
     }
 }
 
+-(NSMutableArray *) generateTestComicsList
+{
+    XMLComicParser *parser = [[XMLComicParser alloc] initWithPath:@"ComicsLibrary/comic1/"];
+    [parser parseComicXML:YES];
+    Comic *comic1 = parser.comic;
+    NSMutableArray *comicsList = [NSMutableArray arrayWithObjects: comic1, nil];
+    for (int i = 0; i < 20; ++i)
+    {
+        [comicsList addObject:comic1];
+    }
+    return [NSMutableArray arrayWithObject:comicsList];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
@@ -56,10 +70,19 @@
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
-    ComicsListController *libraryViewController = [[[ComicsListController alloc] initWithNibName:@"ComicsListController" bundle:nil] autorelease];	
+    ComicsListController *libraryViewController = [[[ComicsListController alloc] initWithNibName:@"ComicsListController" bundle:nil] autorelease];
+	libraryViewController.comics = [self generateTestComicsList];
+    libraryViewController.tabBarItem.image = [UIImage imageNamed:@"library.png"];
+    libraryViewController.tabBarItem.title = @"Library";
+    
+    ComicsListController *storeViewController = [[[ComicsListController alloc] initWithNibName:@"ComicsListController" bundle:nil] autorelease];
+	storeViewController.comics = [[[NSMutableArray alloc]init]autorelease];
+    storeViewController.tabBarItem.image = [UIImage imageNamed:@"store.png"];
+    storeViewController.tabBarItem.title = @"Store";
+    
     
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:libraryViewController, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:libraryViewController, storeViewController, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

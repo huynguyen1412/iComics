@@ -13,10 +13,6 @@
 		CE5B480314DED0E4004F26E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE5B480114DED0E4004F26E5 /* InfoPlist.strings */; };
 		CE5B480514DED0E4004F26E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B480414DED0E4004F26E5 /* main.m */; };
 		CE5B480914DED0E4004F26E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B480814DED0E4004F26E5 /* AppDelegate.m */; };
-		CE5B480E14DED0E4004F26E5 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5B480D14DED0E4004F26E5 /* first.png */; };
-		CE5B481014DED0E4004F26E5 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5B480F14DED0E4004F26E5 /* first@2x.png */; };
-		CE5B481514DED0E4004F26E5 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5B481414DED0E4004F26E5 /* second.png */; };
-		CE5B481714DED0E4004F26E5 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5B481614DED0E4004F26E5 /* second@2x.png */; };
 		CE5B482B14DED0E4004F26E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5B482A14DED0E4004F26E5 /* SenTestingKit.framework */; };
 		CE5B482C14DED0E4004F26E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5B47F814DED0E4004F26E5 /* UIKit.framework */; };
 		CE5B482D14DED0E4004F26E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5B47FA14DED0E4004F26E5 /* Foundation.framework */; };
@@ -25,6 +21,8 @@
 		CE5B484514DED197004F26E5 /* Comic.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B484214DED197004F26E5 /* Comic.m */; };
 		CE5B484614DED197004F26E5 /* ComicPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B484414DED197004F26E5 /* ComicPage.m */; };
 		CEBDF8B414E12334007B453C /* ComicsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBDF8B214E12333007B453C /* ComicsListController.m */; };
+		CECA4BD214E5B423001F7BD9 /* store.png in Resources */ = {isa = PBXBuildFile; fileRef = CECA4BD014E5B423001F7BD9 /* store.png */; };
+		CECA4BD414E5B562001F7BD9 /* library.png in Resources */ = {isa = PBXBuildFile; fileRef = CECA4BD314E5B562001F7BD9 /* library.png */; };
 		CECD5D3B14E29F9F0041B69D /* ComicUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CECD5D3A14E29F9F0041B69D /* ComicUITableViewCell.m */; };
 		CECD5D4014E2A23B0041B69D /* ComicUITableViewCell.h in Resources */ = {isa = PBXBuildFile; fileRef = CECD5D3F14E2A23B0041B69D /* ComicUITableViewCell.h */; };
 		CECD5D4414E2A4E10041B69D /* list-item.png in Resources */ = {isa = PBXBuildFile; fileRef = CECD5D4214E2A4E10041B69D /* list-item.png */; };
@@ -65,10 +63,6 @@
 		CE5B480614DED0E4004F26E5 /* iComics-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iComics-Prefix.pch"; sourceTree = "<group>"; };
 		CE5B480714DED0E4004F26E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE5B480814DED0E4004F26E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CE5B480D14DED0E4004F26E5 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		CE5B480F14DED0E4004F26E5 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		CE5B481414DED0E4004F26E5 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		CE5B481614DED0E4004F26E5 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		CE5B482914DED0E4004F26E5 /* iComicsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iComicsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5B482A14DED0E4004F26E5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		CE5B483214DED0E4004F26E5 /* iComicsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iComicsTests-Info.plist"; sourceTree = "<group>"; };
@@ -81,6 +75,8 @@
 		CE5B484414DED197004F26E5 /* ComicPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicPage.m; sourceTree = "<group>"; };
 		CEBDF8B114E12333007B453C /* ComicsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicsListController.h; sourceTree = "<group>"; };
 		CEBDF8B214E12333007B453C /* ComicsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicsListController.m; sourceTree = "<group>"; };
+		CECA4BD014E5B423001F7BD9 /* store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = store.png; sourceTree = "<group>"; };
+		CECA4BD314E5B562001F7BD9 /* library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library.png; sourceTree = "<group>"; };
 		CECD5D3A14E29F9F0041B69D /* ComicUITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicUITableViewCell.m; sourceTree = "<group>"; };
 		CECD5D3F14E2A23B0041B69D /* ComicUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicUITableViewCell.h; sourceTree = "<group>"; };
 		CECD5D4214E2A4E10041B69D /* list-item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-item.png"; sourceTree = "<group>"; };
@@ -168,10 +164,6 @@
 				CE5B484414DED197004F26E5 /* ComicPage.m */,
 				CE5B480714DED0E4004F26E5 /* AppDelegate.h */,
 				CE5B480814DED0E4004F26E5 /* AppDelegate.m */,
-				CE5B480D14DED0E4004F26E5 /* first.png */,
-				CE5B480F14DED0E4004F26E5 /* first@2x.png */,
-				CE5B481414DED0E4004F26E5 /* second.png */,
-				CE5B481614DED0E4004F26E5 /* second@2x.png */,
 				CE5B47FF14DED0E4004F26E5 /* Supporting Files */,
 				CEBDF8B114E12333007B453C /* ComicsListController.h */,
 				CECD5D4D14E330B70041B69D /* ComicsListController.xib */,
@@ -221,6 +213,8 @@
 		CECD5D4114E2A4A40041B69D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CECA4BD314E5B562001F7BD9 /* library.png */,
+				CECA4BD014E5B423001F7BD9 /* store.png */,
 				CECD5D5814E4732C0041B69D /* comic */,
 				CECD5D4214E2A4E10041B69D /* list-item.png */,
 				CECD5D4314E2A4E10041B69D /* list-item@2x.png */,
@@ -313,10 +307,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5B480314DED0E4004F26E5 /* InfoPlist.strings in Resources */,
-				CE5B480E14DED0E4004F26E5 /* first.png in Resources */,
-				CE5B481014DED0E4004F26E5 /* first@2x.png in Resources */,
-				CE5B481514DED0E4004F26E5 /* second.png in Resources */,
-				CE5B481714DED0E4004F26E5 /* second@2x.png in Resources */,
 				CECD5D4014E2A23B0041B69D /* ComicUITableViewCell.h in Resources */,
 				CECD5D4414E2A4E10041B69D /* list-item.png in Resources */,
 				CECD5D4514E2A4E10041B69D /* list-item@2x.png in Resources */,
@@ -330,6 +320,8 @@
 				CECD5D6314E4732C0041B69D /* line2_tile1.jpg in Resources */,
 				CECD5D6414E4732C0041B69D /* line2_tile2.jpg in Resources */,
 				CECD5D6614E551E40041B69D /* contents.xml in Resources */,
+				CECA4BD214E5B423001F7BD9 /* store.png in Resources */,
+				CECA4BD414E5B562001F7BD9 /* library.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
