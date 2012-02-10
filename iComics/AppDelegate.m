@@ -35,6 +35,7 @@
     {
         [fileManager createDirectoryAtPath:comicsLibraryPath withIntermediateDirectories:YES attributes:nil error:nil];
         NSArray *comicFiles = [NSArray arrayWithObjects: 
+                               @"contents.xml",
                                @"cover.jpg",
                                @"line1_tile1.jpg",
                                @"line1_tile2.jpg",
@@ -47,7 +48,6 @@
              [[appFolderPath stringByAppendingString: @"/"] stringByAppendingString:comicFile] toPath:
              [[comicsLibraryPath stringByAppendingString: @"/"] stringByAppendingString:comicFile] error:nil];
         }
-        NSLog(@"Directory Contents:\n%@", [fileManager directoryContentsAtPath: comicsLibraryPath]);
     }
 }
 
